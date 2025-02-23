@@ -1,0 +1,99 @@
+/*
+Name: Ijaz Miakhel
+File: css-assignment3\part4-layout\index.html
+Date: 2025-02-22
+A styled webpage of images
+*/
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+}
+
+nav {
+  background-color: #000;
+  padding: 0.5em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  width: 200px;
+}
+
+/* Changes I make are listed below */
+
+/* display navigation items in a row, 
+with an equal amount of space between the items. */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* making the navigation bar scroll with the content 
+and then making it stuck at the top of viewport */
+nav {
+  position: sticky;
+  top: 0;
+}
+
+/* making the image inside the article text wrapped around it . */
+article img {
+  float: left; /* Floats the image to the left of the text */
+  margin-right: 20px; /* Adds space between the image and text */
+  margin-bottom: 10px; /* Adds space below the image */
+}
+
+/* editing the <article> and <asie> element */
+main.grid {
+  display: flex; /* Enable Flexbox layout */
+  gap: 20px; /* Space between columns */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+article,
+aside {
+  flex: 1; /* Allows both columns to have flexible width */
+}
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 1px; /* 1px gap between images */
+}
