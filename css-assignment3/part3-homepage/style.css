@@ -1,0 +1,209 @@
+/*
+Name: Ijaz Miakhel
+File: css-assignment3\part3-homepage\style.css
+Date: 2025-02-22
+A styled homepage of a college.
+*/
+
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+/* Using the @font-face code for the fonts */
+@font-face {
+  font-family: "Merriweather";
+  src: url("fonts/Merriweather-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  /* Applying the fonts */
+  font-family: "Merriweather", serif;
+
+  /* Applying the font size */
+  font-size: 10px;
+
+  /* giving the body a line-height */
+  line-height: 1.6;
+
+  /* adding body spacing and letter-spacing to the body */
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+/* Giving heading and other element types appropriate font-sizes */
+h1 {
+  font-size: 2.5rem;
+  /* centering the top level heading */
+  text-align: center;
+  /* adding letter-spacing for readability */
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2rem;
+  /* adding letter-spacing for readability */
+  letter-spacing: 1px;
+}
+
+p,
+ul,
+ol {
+  font-size: 1rem;
+}
+
+nav ul {
+  font-size: 1.2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* adding text-indentation to the <section> */
+section p:first-of-type {
+  text-indent: 20px;
+}
+
+/* Giving the link, visited, focus, and hover states some colors */
+a {
+  color: #a66;
+  /* making the texts underlined by default */
+  text-decoration: underline;
+  /* remove the default focus outline */
+  outline: none;
+}
+
+a:visited {
+  color: #8a4;
+}
+
+a:hover {
+  color: #d33;
+  /* remove the underline when hovered over */
+  text-decoration: none;
+}
+
+a:focus {
+  color: #d33;
+  /* remove the underline when focused over */
+  text-decoration: none;
+}
+
+/* giving the active state a different style */
+a:active {
+  color: #fff;
+  background-color: #a66;
+  font-weight: bold;
+  padding: 0 4px;
+}
+
+/* External links */
+a[href^="http"]:not([href*="https://1jazu11ah.github.io/INFT1206-WebDev/css-assignment3/part3-homepage/"])::after
+{
+  content: ""; /* we have to add content becuase it's required for the ::after psuedo element */
+  display: inline-block; /* Ensures it behaves like an inline element */
+  width: 16px; /* Width of the icon */
+  height: 16px; /* Height of the icon */
+  background-image: url("external-link-52.png"); /* Path to the icon */
+  background-size: contain; /* Ensures the icon is contained within the specified dimensions */
+  margin-left: 5px; /* Adds a little space between the text and the icon */
+}
+
+/* Styling for unordered and ordered lists */
+ul,
+ol {
+  list-style-type: square;
+  margin-top: 1em; /* Adds space above the list */
+  margin-bottom: 1em; /* Adds space below the list */
+  padding-left: 20px; /* Indentation for list items */
+}
+
+/* Styling for list items */
+li {
+  line-height: 1.6;
+  margin-bottom: 0.5em; /* Adds a little space below each list item */
+}
+
+/* Style the navigation menu so that it harmonizes with the page. */
+/* we need to reset the default list style */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set the list items to stack vertically */
+nav li {
+  background-color: #f4f4f4;
+  margin: 30px 0; /* Space between each box */
+  padding: 20px; /* Space inside each box */
+  text-align: center;
+  border: 2px solid #ddd;
+}
+
+/* we need to reset the default list style */
+nav a {
+  text-decoration: none;
+  font-size: 16px; /* Font size for the link */
+}
