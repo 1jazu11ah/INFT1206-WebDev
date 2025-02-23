@@ -1,0 +1,57 @@
+/*
+Name: Ijaz Miakhel
+File: css-assignment3\part2-box\index.html
+Date: 2025-02-22
+A styled box using CSS.
+*/
+
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+
+.box {
+  /* setting an appropriate height and width */
+  width: 200px;
+  height: 150px;
+
+  /* centering the box horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Center the text within the box */
+  /* for vertical centering */
+  line-height: 150px;
+  /* for horizontal centering */
+  text-align: center;
+
+  /* Font size set to 1.125rem, which is equal to 18px, 
+  calculated by dividing 18px by the base font size of 16px. */
+  font-size: 1.125rem;
+
+  /* setting the background color */
+  background-color: red;
+
+  /* setting a contrasting color for the text and a black text shadow */
+  /* the shadow moves 2px to the right, 2px down, with 4px blur radius. */
+  color: white;
+  text-shadow: 2px 2px 4px black;
+
+  /* creating a border radius */
+  border-radius: 8px;
+
+  /* editing the border with a slightly darker shade of the base color */
+  border: 1px solid rgb(151, 34, 34);
+
+  /* adding the semi-transpartent black gradient */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2) 30%
+  );
+  /* adding the box shadow for 3D look of the box */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+    inset 4px 4px 6px rgba(255, 255, 255, 0.3),
+    inset -4px -4px 6px rgba(0, 0, 0, 0.3);
+}
