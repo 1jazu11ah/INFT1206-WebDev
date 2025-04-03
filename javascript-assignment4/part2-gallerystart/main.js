@@ -29,7 +29,7 @@ const altTexts = {
 };
 
 /* Looping through images */
-for (let i = 0; i < imageFilenames.length; i++) {
+for (let i = 1; i < imageFilenames.length; i++) {
   const newImage = document.createElement("img");
   const filename = imageFilenames[i];
   newImage.setAttribute("src", `images/${filename}`);
