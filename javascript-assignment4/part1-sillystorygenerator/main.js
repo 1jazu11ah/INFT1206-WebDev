@@ -1,3 +1,9 @@
+/* 
+Name: Ijaz Miakhel
+File: main.js
+Date: 2025-04-02
+Description: JavaScript code for silly story generator
+*/
 const customName = document.getElementById("customname");
 const randomize = document.querySelector(".randomize");
 const story = document.querySelector(".story");
