@@ -1,11 +1,17 @@
+<!--
+Name: Ijaz Miakhel
+File: index.html
+Date: 09 April 2025
+Description: Accessibility improvements for a wildlife website.
+-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
 
     <title>Accessibility assessment</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One"
       rel="stylesheet"
       type="text/css"
     />
@@ -31,7 +37,9 @@
       </ul>
 
       <form class="search" role="search">
-        <input type="search" name="q" placeholder="Search query" />
+        <!-- Added a visually hidden label for screen reader accessibility -->
+        <label for="search" class="sr-only">Search wildlife website</label>
+        <input type="search" name="q" id="search" placeholder="Search query" />
         <input type="submit" value="Go!" />
       </form>
     </nav>
@@ -77,13 +85,13 @@
         </p>
 
         <table>
-          <!-- Added a caption for screen readers and better context -->
+          <!-- Added a caption to summarize the table for screen readers -->
           <caption>
-            Bear Species Information
+            Information about different types of bears and their characteristics
           </caption>
           <thead>
             <tr>
-              <!-- Replaced <td> with <th> and added scope="col" for accessibility -->
+              <!-- Added scope="col" for column headers to improve screen reader support -->
               <th scope="col">Bear Type</th>
               <th scope="col">Coat</th>
               <th scope="col">Adult size</th>
@@ -94,7 +102,8 @@
           </thead>
           <tbody>
             <tr>
-              <td>Wild</td>
+              <!-- Added scope="row" for the row header for better screen reader understanding -->
+              <th scope="row">Wild</th>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
               <td>Woods and forests</td>
@@ -102,9 +111,9 @@
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
-              <td>Urban</td>
+              <th scope="row">Urban</th>
               <td>North Face</td>
-              <td>18 to 22</td>
+              <td>18 to 22 meters</td>
               <td>Condos and coffee shops</td>
               <td>20 to 32 years</td>
               <td>Starbucks, sushi</td>
@@ -202,12 +211,18 @@
 
         <section class="comments">
           <!-- Changed from <div> to <button> for semantic correctness-->
-          <button class="show-hide" aria-expanded="false">Show comments</button>
+          <button
+            class="show-hide"
+            aria-expanded="false"
+            aria-controls="comment-section"
+          >
+            Show comments
+          </button>
 
           <div class="comment-wrapper">
             <h2>Add comment</h2>
 
-            <form class="comment-form">
+            <form class="comment-form" id="comment-section">
               <!-- Wrapped text in <label> with 'for' attribute linked to the input 'id' -->
               <div class="flex-pair">
                 <label for="name">Your name:</label>

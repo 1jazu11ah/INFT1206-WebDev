@@ -1,3 +1,9 @@
+/*
+Name: Ijaz Miakhel
+File: style.css
+Date: 09 April 2025
+Description: Accessibility improvements for a wildlife website.
+*/
 /* || General setup */
 
 html,
@@ -15,6 +21,21 @@ body {
   width: 80%;
   min-width: 1024px;
   margin: 0 auto;
+}
+
+/* || Accessibility */
+
+/* Hides elements visually but keeps them accessible for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* || typography */
@@ -68,7 +89,7 @@ table {
 
 /* || header layout */
 /* Changed nav background to white */
-div[class="nav"],
+nav.nav,
 article,
 footer,
 .secondary {
@@ -85,28 +106,28 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+.nav {
   height: 50px;
-  background-color: ff80ff;
+  background-color: white;
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+.nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
+.nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+.nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -114,7 +135,7 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+.nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -220,16 +241,16 @@ audio {
 .comment-form .flex-pair {
   display: flex;
   padding: 0 3rem 1rem;
+  align-items: center; /* Ensure vertical alignment */
 }
 
 .comment-form label {
-  align-self: center;
   flex: 2;
   text-align: right;
+  margin-right: 1rem; /* Add space between label and input */
 }
 
 .comment-form input {
-  margin-left: 1rem;
   flex: 6;
 }
 
@@ -274,4 +295,12 @@ audio {
 
 .comment-container li p:nth-child(2) {
   flex: 5;
+}
+
+/* || New Styles for Accessibility & Button Focus */
+
+/* Focus style for buttons */
+.show-hide:focus {
+  outline: 2px solid #005a9c;
+  outline-offset: 2px;
 }
